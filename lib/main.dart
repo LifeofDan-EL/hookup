@@ -1,63 +1,19 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'home_page.dart';
 import 'package:flutter/rendering.dart';
+import 'package:hookup/login_user_page.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(new MyApp());
 
-class MyApp extends StatefulWidget {
-  // This widget is the root of your application.
-  @override
-  _MyAppState createState() => _MyAppState();
-}
+class MyApp extends StatelessWidget {
 
-class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Weather App',
-      theme: ThemeData(
-        primaryColor: Color(0xFFAAAAAA),
-      ),
-      home: Scaffold(
-        backgroundColor: Colors.white,
-
-        // Body
-        body: ListView(
-
-          children: <Widget>[
-            Padding(
-              padding: const EdgeInsets.only(top: 400),
-              child: RaisedButton(
-                onPressed: () {
-
-                },
-                child: Text(
-                  'I have an account',
-                  style: TextStyle(
-                    color: Colors.white,
-                  ),
-                ),
-
-                color: Colors.teal,
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.only(top: 20),
-              child: RaisedButton(
-                onPressed: () {
-                },
-                child: Text(
-                  'Create an account',
-                  style: TextStyle(
-                    color: Colors.teal,
-                  ),
-                ),
-              ),
-            )
-          ],
-        ),
-      ),
-    );
+  return new MaterialApp(
+//    theme: new ThemeData(primarySwatch: Colors.white),
+      home: HomePage(),
+);
   }
 }
