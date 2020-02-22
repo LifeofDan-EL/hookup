@@ -35,7 +35,7 @@ class RegisterUser extends StatelessWidget {
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.only(left: 30),
+                padding: const EdgeInsets.only(),
                 child: Text(
                     'Account',
                     style:TextStyle(
@@ -46,8 +46,23 @@ class RegisterUser extends StatelessWidget {
                 ),
               ),
               TextField(
+            decoration: InputDecoration(
+           hintText: 'Email Address'
+            ),
+              ),
 
-              )
+              TextField(
+                decoration: InputDecoration(
+                    hintText: 'Password '
+                ),
+              ),
+
+              TextField(
+                decoration: InputDecoration(
+                    hintText: 'Confirm Password'
+                ),
+              ),
+
             ],
        ),
         ),
