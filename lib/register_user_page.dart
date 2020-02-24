@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'login_user_page.dart';
-// import 'package:flutter_country_picker/flutter_country_picker.dart';
+ import 'package:flutter_country_picker/flutter_country_picker.dart';
 
 class RegisterUser extends StatefulWidget {
   @override
@@ -73,16 +73,35 @@ class _RegisterUserState extends State<RegisterUser> {
                 ),
                 keyboardType: TextInputType.number,
               ),
+//              CountryPicker(
+//                dense: false,
+//                showFlag: false,
+//                showCurrency: false,
+//                onChanged: (Country country){
+//                  setState(() {
+//                    _selected = country;
+//                  });
+//                },
+//                selectedCountry: _selected,
+//              ),
               Padding(
                 padding: const EdgeInsets.only(top: 20),
                 child: Row(
                   children: <Widget>[
+                    Checkbox(
+                      value: readVal,
+                      onChanged: (bool value){
+                        setState(() {
+                          readVal = value;
+                        });
+                      },
+                    ),
 
                     Text(
                       'I agree with the terms & conditions',
                       style: TextStyle(
                         color: Colors.black,
-                        fontSize: 10,
+                        fontSize: 13,
                       ),
                     )
                   ],
