@@ -17,8 +17,9 @@ class LoginUser extends StatelessWidget {
           elevation: 0,
         ),
         body: Padding(
-          padding: const EdgeInsets.only(left: 30, right: 30),
+          padding: const EdgeInsets.only(left: 40, right: 40),
           child: ListView(
+            physics: BouncingScrollPhysics(),
             children: <Widget>[
               Padding(
                 padding: const EdgeInsets.only(top: 70),
@@ -48,6 +49,7 @@ class LoginUser extends StatelessWidget {
                 padding: const EdgeInsets.only(top: 5),
                 child: TextField(
                   decoration: InputDecoration(hintText: 'Password'),
+                  obscureText: true,
                 ),
               ),
               Padding(
@@ -63,6 +65,7 @@ class LoginUser extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.only(top: 40),
                 child: RaisedButton(
+                  elevation: 3,
                   onPressed: () {},
                   child: Text(
                     'Sign In',
@@ -77,6 +80,7 @@ class LoginUser extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.only(top: 20),
                 child: RaisedButton(
+                  elevation: 3,
                   onPressed: () {
                     Navigator.push(
                       context,

@@ -19,44 +19,50 @@ class _HomePageState extends State<HomePage> {
         backgroundColor: Colors.white,
 
         // Body
-        body: ListView(
-          children: <Widget>[
-            Padding(
-              padding: const EdgeInsets.only(top: 400),
-              child: RaisedButton(
-                onPressed: () {
-                  Navigator.push(context, MaterialPageRoute(builder: (context) => LoginUser()),
-                  );
-                },
-                child: Text(
-                  'I have an account',
-                  style: TextStyle(
-                    color: Colors.white,
+        body: Padding(
+          padding: const EdgeInsets.only(left: 40, right: 40),
+          child: ListView(
+            physics: BouncingScrollPhysics(),
+            children: <Widget>[
+              Padding(
+                padding: const EdgeInsets.only(top: 400),
+                child: RaisedButton(
+                  elevation: 3,
+                  onPressed: () {
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => LoginUser()),
+                    );
+                  },
+                  child: Text(
+                    'I have an account',
+                    style: TextStyle(
+                      color: Colors.white,
+                    ),
                   ),
+                  color: Colors.teal,
                 ),
-                color: Colors.teal,
               ),
-            ),
-            Padding(
-              padding: const EdgeInsets.only(top: 20),
-              child: RaisedButton(
-                onPressed: () {
-                  Navigator.push(context, MaterialPageRoute(builder: (context) => RegisterUser()),
-                  );
-                },
-                child: Text(
-                  'Create an account',
-                  style: TextStyle(
-                    color: Colors.teal,
+              Padding(
+                padding: const EdgeInsets.only(top: 20),
+                child: RaisedButton(
+                  elevation: 3,
+                  onPressed: () {
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => RegisterUser()),
+                    );
+                  },
+                  child: Text(
+                    'Create an account',
+                    style: TextStyle(
+                      color: Colors.teal,
+                    ),
                   ),
+                  color: Colors.white,
+                  highlightColor: Colors.teal,
                 ),
-                color: Colors.white,
-                highlightColor: Colors.teal,
-              ),
 
 
-            )
-          ],
+              )
+            ],
+          ),
         ),
       ),
     );
